@@ -29,7 +29,6 @@ class HiveService {
     return tasks;
   }
 
-  // Method 1: تعديل مهمة موجودة (Update)
   Future<void> updateTask(int index, Todo todo) async {
     await box.putAt(index, {
       'title': todo.title,
@@ -37,7 +36,6 @@ class HiveService {
     });
   }
 
-  // Method 2: حذف مهمة (Delete)
   Future<void> deleteTask(int index) async {
     await box.deleteAt(index);
   }
